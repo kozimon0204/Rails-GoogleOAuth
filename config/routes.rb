@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'user/index'
+
+  get 'user/edit'
+
   #get 'sessions/create'
 
  # get 'sessions/destroy'
