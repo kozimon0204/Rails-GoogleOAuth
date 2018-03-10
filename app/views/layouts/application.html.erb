@@ -27,7 +27,7 @@
               <a class="a-button" href="#">Menu 3</a>
             </li>
             <li>
-                <% if current_user %>
+                <% if user_signed_in? %>
                   <!-- Signed in as
                   <strong>
                     <%= current_user.name %>
