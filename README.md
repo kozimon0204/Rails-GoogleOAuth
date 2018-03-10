@@ -23,3 +23,5 @@ rate db:migrate
 [爆速ッ!! gem omniauth-google-oauth2 で認証させる](https://qiita.com/bino98/items/596b5cffeca7c104bd90)
 
 [Google Authentication in Ruby On Rails](https://richonrails.com/articles/google-authentication-in-ruby-on-rails/?comments_page=2)
+
+[deviseでログイン必須ページ、リダイレクトページ指定](https://qiita.com/mosa_siru/items/8dc8bb098f1dea6ffb5d)
