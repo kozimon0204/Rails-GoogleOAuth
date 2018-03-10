@@ -15,10 +15,10 @@
         <nav>
           <ul class="main-nav">
             <li>
-              <%= link_to "GoogleOAuth", root_path ,{ :class=>"a-button logo" }%>
+              <%= link_to "GoogleOAuth", root_path ,{class: "a-button logo" }%>
             </li>
             <li>
-              <%= link_to "User", user_index_path ,{ :class=>"a-button" }%>
+              <%= link_to "User", user_index_path ,{class: "a-button" }%>
             </li>
             <li>
               <a class="a-button" href="#">Menu 2</a>
@@ -28,14 +28,14 @@
             </li>
             <li>
                 <% if current_user %>
-                Signed in as
-                <strong>
-                  <%= current_user.name %>
-                </strong>!
-                <%= link_to "Sign out", signout_path, id: "sign_out" %>
-                  <% else %>
-                    <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
-                      <% end %>
+                  <!-- Signed in as
+                  <strong>
+                    <%= current_user.name %>
+                  </strong>! -->
+                  <%= link_to "Sign out", signout_path, {id: "sign_out", class: "a-button login"} %>
+                <% else %>
+                  <%= link_to "Sign in with Google", "/auth/google_oauth2", {id: "sign_out", class: "a-button login"} %>
+                <% end %>
             </li>
           </ul>
         </nav>

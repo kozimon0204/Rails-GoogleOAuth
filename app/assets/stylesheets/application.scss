@@ -18,32 +18,38 @@
 @import "bootstrap";
 
  /* ヘッダー用 */
- .header-user {
-     text-align: right;
- }
+ .main-nav{
+  display: flex;
+  list-style:none;
+  padding-left: 0px;
 
- .main-nav .a-button {
+  background-color: aliceblue;
+
+  a {
+
+    text-decoration: none;
+  }
+
+  .a-button {
     margin: 10px;
     border-radius: 5px;
     background: #60B99A;
     color: #fff;
     display: block;
     padding: 15px;
-    text-decoration: none;
   }
-  .main-nav .logo {
+
+  .logo {
     background-color: aliceblue;
     color: gray;
   }
 
-  .main-nav {
-    display: flex;
-    list-style:none;
-    padding-left: 0px;
-
+  .login{
     background-color: aliceblue;
+    color: skyblue;
   }
 
-  .main-nav li:last-child {
+  li:last-child {
     margin-left: auto;
   }
+ } 
