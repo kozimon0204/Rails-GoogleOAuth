@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+ /* ヘッダー用 */
+ .main-nav{
+  display: flex;
+  list-style:none;
+  padding-left: 0px;
+
+  background-color: aliceblue;
+
+  a {
+
+    text-decoration: none;
+  }
+
+  .a-button {
+    margin: 10px;
+    border-radius: 5px;
+    background: #60B99A;
+    color: #fff;
+    display: block;
+    padding: 15px;
+  }
+
+  .logo {
+    background-color: aliceblue;
+    color: gray;
+  }
+
+  .login{
+    background-color: aliceblue;
+    color: skyblue;
+  }
+
+  li:last-child {
+    margin-left: auto;
+  }
+ } 

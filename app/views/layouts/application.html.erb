@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Google Auth Example App</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+
+<head>
+  <title>Google Auth Example App</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
+      <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <header>
     <div>
-      <% if current_user %>
-        Signed in as <strong><%= current_user.name %></strong>!
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
-      <% else %>
-        <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
-      <% end %>
+      <div>
+        <nav>
+          <ul class="main-nav">
+            <li>
+              <%= link_to "GoogleOAuth", root_path ,{class: "a-button logo" }%>
+            </li>
+            <li>
+              <%= link_to "User", user_index_path ,{class: "a-button" }%>
+            </li>
+            <li>
+              <a class="a-button" href="#">Menu 2</a>
+            </li>
+            <li>
+              <a class="a-button" href="#">Menu 3</a>
+            </li>
+            <li>
+                <% if user_signed_in? %>
+                  <!-- Signed in as
+                  <strong>
+                    <%= current_user.name %>
+                  </strong>! -->
+                  <%= link_to "Sign out", signout_path, {id: "sign_out", class: "a-button login"} %>
+                <% else %>
+                  <%= link_to "Sign in with Google", user_google_omniauth_authorize_path, {id: "sign_out", class: "a-button login"} %>
+                <% end %>
+                
+            </li>
+          </ul>
+        </nav>
+
+
+      </div>
+      <div class="header-user">
+        
+      </div>
     </div>
-    <div>
+  </header>
+
+  <div>
     <%= yield %>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
