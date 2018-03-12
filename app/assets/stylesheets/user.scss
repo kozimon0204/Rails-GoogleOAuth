@@ -1,3 +1,17 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container-user{
+
+    .table-user {
+        height: 600px;
+        overflow: scroll;
+    
+    }
+
+    .row-button{
+        margin-top: 30px;
+        text-align: center;
+    }
+}

@@ -10,48 +10,50 @@
 
 <body>
   <header>
-    <div>
-      <div>
         <nav>
           <ul class="main-nav">
             <li>
               <%= link_to "GoogleOAuth", root_path ,{class: "a-button logo" }%>
             </li>
             <li>
-              <%= link_to "User", user_index_path ,{class: "a-button" }%>
+              <a class="a-button" href="#">権限設定</a>
             </li>
             <li>
-              <a class="a-button" href="#">Menu 2</a>
+              <a class="a-button" href="#">テンプレート適用</a>
             </li>
             <li>
-              <a class="a-button" href="#">Menu 3</a>
+              <a class="a-button" href="#">テンプレート管理</a>
             </li>
             <li>
-                <% if user_signed_in? %>
-                  <!-- Signed in as
+              <a class="a-button" href="#">サブシステム管理</a>
+            </li>
+            <li>
+              <%= link_to "アカウント管理", user_index_path ,{id: "nav-user", class: "a-button" }%>
+            </li>
+            <li>
+              <% if user_signed_in? %>
+                <!-- Signed in as
                   <strong>
                     <%= current_user.name %>
                   </strong>! -->
-                  <%= link_to "Sign out", signout_path, {id: "sign_out", class: "a-button login"} %>
-                <% else %>
-                  <%= link_to "Sign in with Google", user_google_omniauth_authorize_path, {id: "sign_out", class: "a-button login"} %>
-                <% end %>
-                
+                <%= link_to "Sign out", signout_path, {id: "sign_out", class: "a-button login"} %>
+                  <% else %>
+                    <%= link_to "Sign in with Google", user_google_omniauth_authorize_path, {id: "sign_out", class: "a-button login"} %>
+                      <% end %>
+
             </li>
           </ul>
         </nav>
 
-
-      </div>
-      <div class="header-user">
-        
-      </div>
-    </div>
   </header>
 
   <div>
     <%= yield %>
   </div>
+
+  <footer>
+        <p>(C) 2018 kozimon0204</p>
+  </footer>
 </body>
 
 </html>

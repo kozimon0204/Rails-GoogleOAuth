@@ -26,22 +26,24 @@
   background-color: aliceblue;
 
   a {
-
     text-decoration: none;
   }
 
   .a-button {
     margin: 10px;
     border-radius: 5px;
-    background: #60B99A;
-    color: #fff;
+    
+    color: gray;
     display: block;
     padding: 15px;
+  }
+  .a-button:hover {
+    color: #60B99A;
   }
 
   .logo {
     background-color: aliceblue;
-    color: gray;
+    color: black;
   }
 
   .login{
@@ -53,3 +55,17 @@
     margin-left: auto;
   }
  } 
+
+ 
+/* フッター用 */
+ footer {
+   margin-top: 30px;
+  height: 50px;
+  background-color: aliceblue;
+  text-align: center;
+  color: gray;
+
+  p {
+    padding-top: 15px;
+  }
+}
