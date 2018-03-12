@@ -34,8 +34,9 @@
                   </strong>! -->
                   <%= link_to "Sign out", signout_path, {id: "sign_out", class: "a-button login"} %>
                 <% else %>
-                  <%= link_to "Sign in with Google", "/auth/google_oauth2", {id: "sign_out", class: "a-button login"} %>
+                  <%= link_to "Sign in with Google", user_google_omniauth_authorize_path, {id: "sign_out", class: "a-button login"} %>
                 <% end %>
+                
             </li>
           </ul>
         </nav>
@@ -47,7 +48,6 @@
       </div>
     </div>
   </header>
-
 
   <div>
     <%= yield %>

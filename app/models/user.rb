@@ -1,13 +1,11 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-
+  # :confirmable, :lockable, :registerable, :recoverable, 
+  devise :database_authenticatable,
+         :rememberable, :trackable, :validatable, :timeoutable, :omniauthable
     # googleOAuthからのレスポンスを得て、ユーザテーブルに以下情報を登録
     def self.from_omniauth(auth)
         where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
-            p auth
           user.provider = auth.provider
           user.uid = auth.uid
           user.name = auth.info.name
@@ -19,7 +17,10 @@ class User < ApplicationRecord
 
 
           user.save!
+
+          user
         end
+
     end
 
     
